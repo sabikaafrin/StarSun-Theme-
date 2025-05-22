@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <div class="container single-post">
     <?php
     if (have_posts()) :
@@ -94,7 +93,13 @@
         echo '<p>No content found</p>';
     endif;
     ?>
+
+
 </div>
+
+
+
+
 
 
 <?php get_footer(); ?>

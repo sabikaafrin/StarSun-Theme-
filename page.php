@@ -23,7 +23,9 @@ $bg_image = get_the_post_thumbnail_url( get_the_ID(), 'full' );
         <?php the_content(); ?>
     </div>
     
+    <div class="sidebar-all">
     <?php get_sidebar(); ?>
+    </div>
 
 </div>
 

@@ -12,36 +12,48 @@
 
     <header>
         <!-- <div class="container"> -->
-            <div class="container top-header">
-                <div class="logo">
+        <div class="container top-header">
+            <div class="logo">
 
-                    <?php $logoImage=get_header_image() ;?>
-                    <a href="<?php echo home_url(); ?>">
-                        <img src="<?php echo $logoImage;?>" alt="logo">
-                    </a>
-                </div>
-
-
-                <!-- search button -->
-                <div class="search-btn">
-                    <?php get_search_form(); ?>
-                </div>
-
-
-                <div class="contact-info">
-                    <a href="tel:8665771221" class="phone">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Symbol.png"
-                            alt="Phone Icon">
-                        <p>866.577.1221</p>
-                    </a>
-                    <a href="tel:8665771221" class="call-button">Call RooterMan</a>
-
-                </div>
+                <?php $logoImage=get_header_image() ;?>
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo $logoImage;?>" alt="logo">
+                </a>
             </div>
-       
+
+
+            <!-- search button -->
+            <div class="search-btn">
+                <?php get_search_form(); ?>
+                <button class="search-icon-only">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/search-icon.png"
+                        alt="Search Icon" />
+                </button>
+            </div>
+
+
+            <div class="contact-info">
+                <a href="tel:8665771221" class="phone">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Symbol.png" alt="Phone Icon">
+                    <p>866.577.1221</p>
+                </a>
+                <a href="tel:8665771221" class="call-button">Call RooterMan</a>
+
+            </div>
+        </div>
+
 
         <nav class="main-nav">
             <div class="container">
+
+                <!-- Hamburger Button -->
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+
                 <?php
         wp_nav_menu(array(
           'theme_location' => 'main-menu',

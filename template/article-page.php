@@ -7,7 +7,7 @@ get_header();
     <h1 id="article" class="container"><?php the_title(); ?></h1>
 
     <!-- Search Box -->
-    <div class="search-btn position">
+    <div class="position container">
         <form method="get" action="">
             <input type="text" name="search"
                 value="<?php echo isset($_GET['search']) ? esc_attr($_GET['search']) : ''; ?>"

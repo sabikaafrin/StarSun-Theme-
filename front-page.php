@@ -17,24 +17,32 @@
             <div>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/car.png" alt="car">
             </div>
-            <?php get_sidebar();?>
+
+            <div class="sidebar-home">
+                <?php get_sidebar();?>
+            </div>
+
         </div>
 
     </section>
 
-    <section class="search-section container">
-        <div class="search-left">
-            <h2>Find Your Local RooterMan</h2>
-            <p>Enter your zip code below to find your local RooterMan. We'll meet your plumbing needs!</p>
-            <div class="search-box">
-                <input type="text" placeholder="City, State, or Zip Code">
-                <button>Search</button>
+    <section class="search-section">
+        <div class="container">
+            <div class="search-left">
+                <h2>Find Your Local RooterMan</h2>
+                <p>Enter your zip code below to find your local RooterMan. We'll meet your plumbing needs!</p>
+                <div class="search-box">
+                    <input type="text" placeholder="City, State, or Zip Code">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <div class="map-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/map.png" alt="map">
             </div>
         </div>
-        <div >
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/map.png" alt="map">
-        </div>
     </section>
+
 
 
 

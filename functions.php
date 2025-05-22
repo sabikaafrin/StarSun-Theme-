@@ -60,6 +60,13 @@ function starsun_enqueue_scripts() {
       null,
       true
   );
+  wp_enqueue_script(
+    'starsun-main',
+    get_template_directory_uri() . '/assets/js/main.js',
+    array(),
+    null,
+    true
+);
 }
 add_action('wp_enqueue_scripts', 'starsun_enqueue_scripts');
 
@@ -313,5 +320,18 @@ function register_article_sidebar() {
 }
 add_action('widgets_init', 'register_article_sidebar');
 
+
+// acf
+function register_testimonial_cpt() {
+    register_post_type('testimonials', array(
+        'label' => 'Testimonials',
+        'public' => true,
+        'show_in_rest' => true, 
+        'menu_icon' => 'dashicons-testimonial',
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'has_archive' => true,
+    ));
+}
+add_action('init', 'register_testimonial_cpt');
 
 ?>
