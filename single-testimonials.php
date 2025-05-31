@@ -82,6 +82,21 @@
         echo '<p>This section is hidden.</p>';
       endif;
     ?><br>
+
+    <!-- oEmbed-->
+    <?php if ($video = get_field('featured_video')): ?>
+    <div class="video-wrapper">
+        <?php echo $video; ?>
+    </div>
+    <?php endif; ?>
+
+<!--wysiwyg Editor-->
+    <?php if ($content = get_field('rich_text_content')): ?>
+    <div class="wysiwyg-content">
+        <?php echo $content; ?>
+    </div>
+<?php endif; ?> <br>
+
     <!-- relationship -->
     <h2><u>Relationship</u></h2>
     <?php
